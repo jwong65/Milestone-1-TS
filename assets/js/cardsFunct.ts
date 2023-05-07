@@ -1,6 +1,6 @@
 //I want to use another file to store the cards.
 //Card 1 function to heal by value
-function card1Function(card1, target){
+function card1Function(card1: { value: number; }, target: string){
     if (Number(card1.value)+playerhealth > 20){
         playerhealth=20;
         displayHealth(playerhealth, target)
@@ -13,13 +13,13 @@ function card1Function(card1, target){
     }
 }
 //Card 2 function to do damage.
-function card2Function(card2, target){
+function card2Function(card2: { value: number; }, target: string){
     enemyhealth = enemyhealth - card2.value
     displayHealth(enemyhealth, target)
     numberofCardplayed+=1
 }
 //Card 3 function to reduce damage
-function card3Function(target){
+function card3Function(target: string){
     enemyhealth = enemyhealth - (numberofCardplayed*3)
     displayHealth(enemyhealth, target)
     numberofCardplayed+=1
@@ -28,7 +28,7 @@ function card3Function(target){
 //Card 4 function to add cards back to the deck. 
 function card4Function(){
     discardpile.forEach(()=>{
-        let returnCard= discardpile.pop()
+        let returnCard:any = discardpile.pop()
         deck.push(returnCard)
         shuffleDeck(deck)
     })
@@ -44,7 +44,7 @@ function card5Function(){
 }
 
 //Card 6 function to do damage equalivent to the number of cards in your hand, including itself.
-function card6Function(target){
+function card6Function(target: string){
     //For now target is only opponent
     enemyhealth = enemyhealth - (hand.length+1)
     //Hand.length +1 because the pop happens before the card6function is called

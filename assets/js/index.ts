@@ -4,12 +4,12 @@ var turnNumber = 1;
 
 //The cards will need to be objects that way they have infomration in them
 // It can no longer be var because it will be shuffled.
-var deck =[]
+var deck: never[] =[]
 
 //Need a discardpile = [], that way I can pop cards out and have a length of the deck 
 //Another const hand =[] will be needed so I can keep track of how many cards are in the hand
-const discardpile = []
-const hand=[]
+const discardpile: any[] = []
+const hand: string | any[]= []
 //This variable will keep track of how many number of cards were played this turn. This is because I put an arbitrary limit of 3 cards played per turn
 var numberofCardplayed =0;
 
@@ -20,7 +20,7 @@ var opponentDefense =0;
 //Allowing damage cards to be played variable. This might be a bit much, possibly postMVP type of implemtation
 //var damageAllowed = true;
 
-function displayHealth(healthnum, idname){
+function displayHealth(healthnum: number, idname: string){
     let innerHealth = healthnum
     document.getElementById(idname).textContent=innerHealth
 }
