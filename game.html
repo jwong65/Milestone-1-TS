@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milestone Card game</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main>
+        <div class='characterinfo' id="opponent">
+            <table>
+                <tr>
+                    <td>Opponent</td>
+                </tr>
+            </table>
+            This is the opponent's health.
+            <div class = "health" id="opphealth"></div>
+        </div>
+        <!--<health></health> could also be used?-->
+        <div id = "tips">Tips to remember:
+            <br>
+            Your turn will end after you play any 3 cards.
+            <br>
+            If you draw using the draw button your turn will end and the opponent's turn will begin.
+            <br>
+            The opponent will always do damage equal to their hand size and then draw an additional card.
+            <br>
+            Maximum health is 20, you cannot heal beyond 20.
+        </div>
+        
+        <div class='characterinfo' id="player">
+            <table>
+                <tr>
+                    <td id="PlayerName">Test</td>
+                </tr>
+                <tr>
+                    <td id="NumCardsHand"></td>
+                </tr>
+            </table>
+            <div>This is your health pool.
+                <div class ="health" id ="HP"></div>
+            </div>
+        </div>
+        
+<!-- <div id="hand"></div> This div is unneccesary as the function will createEleemtn with an id of hand -->
+        <div id="info"></div>
+        <!-- <button id="next">Next</button> -->
+    </main>
+    <footer>
+        <button id="showdeck">Show deck</button>
+        <button id="draw">Draw</button>
+        <button id="rules">Rules</button>
+        <button id="endturn">End Turn</button>
+        <button id="showoppturn">Review Opponent's turn</button>
+        <a href="./index.html" onclick="return confirm('Are you sure?')">
+            <button id="newgameIn">New Game</button>
+        </a>
+        
+    </footer>
+        <!--Scripts-->
+        <script src="./assets/js/index.js"></script>
+        <script src="./assets/js/cards.js"></script>
+        <script src="./assets/js/cardsFunct.js"></script>
+        <script src="./assets/js/opponentHand.js"></script>
+        <script src="./assets/js/battle.js"></script>
+        <script src="./assets/js/newHand.js"></script>
+</body>
+</html>
