@@ -4,7 +4,7 @@ var turnNumber = 1;
 
 //The cards will need to be objects that way they have infomration in them
 // It can no longer be var because it will be shuffled.
-var deck: never[] =[]
+var deck: any[] =[]
 
 //Need a discardpile = [], that way I can pop cards out and have a length of the deck 
 //Another const hand =[] will be needed so I can keep track of how many cards are in the hand
