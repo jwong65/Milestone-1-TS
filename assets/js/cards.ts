@@ -6,7 +6,7 @@
 // }
 //A fucntion is needed to generate cards.
 //This constructor will be used to create cards
-function cardCreation(type, value, text, cardID){
+function cardCreation(type:string, value:string, text:string, cardID:number){
     this.type = type
     this.value =value
     this.text = text
